@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- ナビゲーション -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <ul class="nav-links">
+                <li><a href="#about">Profile</a></li>
+                <li><a href="#projects">Works</a></li>
+                <li><a href="#skills">Skills & Tools</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 自己紹介セクション -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Profile</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Rin Imai</h3>
+                    <p class="subtitle">Game Developer / 3D Artist</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <strong>所属:</strong>
+                            <p>会津大学 コンピュータ理工学部</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>専門分野:</strong>
+                            <p>ゲーム開発、3Dモデリング</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>興味分野:</strong>
+                            <p>VR/AR技術、ゲーム開発</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- プロジェクトセクション -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Works</h2>
+            <div class="project-grid">
+                <div class="project-card" onclick="openProjectModal(this)">
+                    <h3>しなだマンの中テレ占拠</h3>
+                    <p class="project-description">テレビスタジオのモデリング・Unityでのエフェクトの作成を担当。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">Blender</span>
+                    </div>
+                    <p class="project-period">2025年 11月～12月</p>
+                    <!-- モーダルデータ -->
+                    <div class="project-image" style="display: none;">
+                        https://via.placeholder.com/600x400?text=しなだマンの中テレ占拠</div>
+                    <div class="project-explanation" style="display: none;">
+                        2025年12月6~7日に福島ビッグパレッドで開催された中テレ祭りの中テレテクノロジーラボにて、展示された「しなだマンの中テレ占拠」。暴走したしなだマンと中テレ君を銃で撃破するゲームです。</div>
+                    <div class="project-role" style="display: none;">テレビスタジオのモデリング、Unityでのエフェクト実装</div>
+                    <div class="project-youtube" style="display: none;">https://www.youtube.com/embed/nNAIxISfTwo</div>
+                </div>
+                <div class="project-card" onclick="openProjectModal(this)">
+                    <h3>Keep Mining!</h3>
+                    <p class="project-description">チームリーダーとして、UnityとBlenderを用いたゲーム開発プロジェクトを管理・ロジック・3Dモデルの実装。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Blender</span>
+                    </div>
+                    <p class="project-period">2025年 8月～9月</p>
+                    <!-- モーダルデータ -->
+                    <div class="project-image" style="display: none;">
+                        https://via.placeholder.com/600x400?text=Keep+Mining!</div>
+                    <div class="project-explanation" style="display: none;">
+                        会津大学の蒼翔祭で展示したVRゲーム。プレイヤーは高スコアを目指し、ひたすらに穴を掘っていきます。</div>
+                    <div class="project-role" style="display: none;">チームリーダー、ゲームロジック実装、3Dモデル制作、プロジェクト管理</div>
+                    <div class="project-youtube" style="display: none;">https://www.youtube.com/embed/HfYnKL4QkV4</div>
+                </div>
+                <div class="project-card" onclick="openProjectModal(this)">
+                    <h3>HATO</h3>
+                    <p class="project-description">アプリ内で使用する3Dモデルの作成を担当。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Blender</span>
+                    </div>
+                    <p class="project-period">2025年 6月</p>
+                    <!-- モーダルデータ -->
+                    <div class="project-image" style="display: none;">https://via.placeholder.com/600x400?text=HATO
+                    </div>
+                    <div class="project-explanation" style="display: none;">
+                        Aizu Huckで作成したiOS向けのモバイルアプリ。Apple Musicで再生した音楽に基づいて、ユーザーの気持ちが3Dモデルとして表現されます。</div>
+                    <div class="project-role" style="display: none;">3Dモデル制作、テクスチャ作成、アニメーション設定</div>
+                    <div class="project-youtube" style="display: none;"></div>
+                </div>
+                <div class="project-card" onclick="openProjectModal(this)">
+                    <h3>音ライブ</h3>
+                    <p class="project-description">ゲーム内で使用する3Dモデルの作成を担当。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Blender</span>
+                    </div>
+                    <p class="project-period">2025年 2月～3月</p>
+                    <!-- モーダルデータ -->
+                    <div class="project-image" style="display: none;">https://via.placeholder.com/600x400?text=音ライブ
+                    </div>
+                    <div class="project-explanation" style="display: none;">
+                        新入生歓迎会向けに作成したVRゲーム。落ちてくるノーツに合わせて操作し、スコアを稼いでいきます。</div>
+                    <div class="project-role" style="display: none;">キャラクター3Dモデル制作、ダンスアニメーション、ステージデザイン</div>
+                    <div class="project-youtube" style="display: none;"></div>
+                </div>
+                <div class="project-card" onclick="openProjectModal(this)">
+                    <h3>ゾンビ無双</h3>
+                    <p class="project-description">ゲーム内で使用する武器の3Dモデルの作成を担当。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Blender</span>
+                    </div>
+                    <p class="project-period">2025年 6月</p>
+                    <!-- モーダルデータ -->
+                    <div class="project-image" style="display: none;">https://via.placeholder.com/600x400?text=ゾンビ無双
+                    </div>
+                    <div class="project-explanation" style="display: none;">
+                        ゾンビを倒すアクションゲーム。様々な武器でゾンビを撃退し、ステージをクリアしていきます。</div>
+                    <div class="project-role" style="display: none;">武器3Dモデル制作、キャラクターデザイン、テクスチャ作成</div>
+                    <div class="project-youtube" style="display: none;">https://www.youtube.com/embed/x6cFj1lezHE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- プロジェクト詳細モーダル -->
+    <div id="projectModal" class="modal" onclick="closeProjectModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+            <div class="modal-body-wrapper">
+                <div class="modal-image-section">
+                    <img id="modalImage" src="" alt="プロジェクト画像" class="modal-image">
+                </div>
+                <div class="modal-info-section">
+                    <h3 id="modalTitle"></h3>
+                    <div class="modal-section">
+                        <h4>ゲームの説明</h4>
+                        <p id="modalExplanation"></p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>担当内容</h4>
+                        <p id="modalRole"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-video-section">
+                <h4>動画</h4>
+                <iframe id="modalYoutube" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- スキル & ツールセクション -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills & Tools</h2>
+            <div class="combined-section">
+                <!-- スキル部分 -->
+                <div class="skills-part">
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <h4>Programming Languages</h4>
+                            <div class="skill-item">
+                                <span class="skill-name">C#</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">C</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Game Development</h4>
+                            <div class="skill-item">
+                                <span class="skill-name">Unity</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Unreal Engine 5</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4>3D Modeling</h4>
+                            <div class="skill-item">
+                                <span class="skill-name">Blender</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Houdini</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ツール部分 -->
+                <div class="tools-part">
+                    <h3>Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <h4>Development Tools</h4>
+                            <div class="skill-item">
+                                <span class="skill-name">Visual Studio Code</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Visual Studio</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Design Tools</h4>
+                            <div class="skill-item">
+                                <span class="skill-name">Adobe After Effects</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Adobe Photoshop</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Adobe Illustrator</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Management Tools</h4>
+                            <div class="skill-item">
+                                <span class="skill-name">Discord</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Github</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Notion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p>&copy; 2026 Rin Imai. All rights reserved.</p>
+        <a class="footer-link" href="https://github.com/Tokurln" target="_blank" rel="noreferrer">Github</a>
+        <a class="footer-link" href="https://x.com/tokurin_athome" target="_blank" rel="noreferrer">Twitter</a>
+        <a class="footer-link" href="https://qiita.com/tokurin" target="_blank" rel="noreferrer">Qiita</a>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

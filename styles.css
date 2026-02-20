@@ -1,0 +1,556 @@
+/* ========== グローバルスタイル ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #1a1a2e;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== カラー変数（参考） ========== */
+/* Primary: #667eea, Secondary: #764ba2, Accent: #4CAF50 */
+/* ========== ナビゲーション ========== */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* ========== ヘッダー ========== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+/* ========== 自己紹介セクション ========== */
+.about {
+    padding: 60px 20px;
+    background-color: #2a2a4e;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #ffffff;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.about-text .subtitle {
+    font-size: 1.2rem;
+    color: #e8d5ff;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.about-text .bio {
+    font-size: 1rem;
+    color: #e8e8e8;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-item {
+    background: #1f1f3d;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #a8daff;
+}
+
+.info-item strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ========== プロジェクトセクション ========== */
+.projects {
+    padding: 60px 20px;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #ffffff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #2a2a4e;
+    border: 1px solid #3a3a5e;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(168, 218, 255, 0.2);
+}
+
+.project-card h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #e0e0e0;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem !important;
+    text-align: left;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-period {
+    font-size: 0.85rem;
+    color: #b0b0c0;
+    margin-top: 1rem;
+    border-top: 1px solid #3a3a5e;
+    padding-top: 1rem;
+}
+
+/* ========== モーダル ========== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+    overflow-y: auto;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #2a2a4e;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 90%;
+    margin: 2rem auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    animation: slideUp 0.3s ease;
+}
+
+.modal-close {
+    float: right;
+    font-size: 1.8rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin-bottom: 1rem;
+}
+
+.modal-close:hover {
+    color: #e0e0e0;
+}
+
+.modal-body-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.modal-image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.modal-info-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-info-section h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.modal-section {
+    margin-bottom: 1.5rem;
+}
+
+.modal-section h4 {
+    color: #a8daff;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.modal-section p {
+    color: #e0e0e0;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+#modalTitle {
+    color: #ffffff;
+}
+
+#modalExplanation,
+#modalRole {
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+.modal-video-section {
+    border-top: 1px solid #3a3a5e;
+    padding-top: 2rem;
+}
+
+.modal-video-section h4 {
+    color: #a8daff;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 1000;
+}
+
+#modalYoutube {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ========== スキルセクション ========== */
+.skills {
+    padding: 60px 20px;
+    background-color: #2a2a4e;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #ffffff;
+}
+
+.combined-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.skills-part h3,
+.tools-part h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: #1f1f3d;
+    border: 1px solid #3a3a5e;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.skill-card h4 {
+    color: #a8daff;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.tool-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.tool-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.skill-item {
+    margin-bottom: 0.8rem;
+}
+
+.skill-item:last-child {
+    margin-bottom: 0;
+}
+
+.skill-name {
+    font-weight: 500;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.progress-bar {
+    display: none;
+}
+
+.progress {
+    display: none;
+}
+
+/* ========== フッター ========== */
+.footer {
+    background-color: #0f0f1e;
+    color: #e0e0e0;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer p {
+    margin: 0;
+    color: #e0e0e0;
+    margin-right: auto;
+}
+
+.footer-link {
+    color: #a8daff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+/* ========== アニメーション ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card.animated,
+.skill-card.animated,
+.tool-item.animated {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ========== レスポンシブデザイン ========== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .combined-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-body-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .modal-content {
+        max-width: 95vw;
+        padding: 1.5rem;
+    }
+
+    #modalYoutube {
+        height: 300px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer p {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}

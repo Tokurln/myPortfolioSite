@@ -92,6 +92,36 @@ body {
     margin: 0 auto;
 }
 
+.profile-header {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between; /* 画像を右端（下のカードの右端）に揃える */
+    gap: 3rem;
+}
+
+/* 見出しを上、名前・役職を下に寄せて、画像の高さに揃える */
+.profile-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about .profile-heading h2 {
+    margin-bottom: 1rem;
+}
+
+.profile-heading .subtitle {
+    margin-bottom: 0;
+}
+
+.profile-icon {
+    width: 240px;
+    height: 240px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .about-text h3 {
     font-size: 1.8rem;
     color: #ffffff;
@@ -539,6 +569,49 @@ body {
 
     .tools-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 左右の余白は .container の 20px だけにして、各セクションで揃える */
+    .about,
+    .projects,
+    .skills {
+        padding: 40px 0;
+    }
+
+    /* プロフィール: 文字を画像の高さに収める */
+
+    .profile-header {
+        gap: 1rem;
+    }
+
+    .about .profile-heading h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .profile-heading h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .profile-heading .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .profile-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* ナビ: 折り返さないように縮める */
+    .logo {
+        font-size: 1.15rem;
+        white-space: nowrap;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
 
     .about-info {

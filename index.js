@@ -41,7 +41,9 @@ function closeProjectModal(event) {
     
     const modal = document.getElementById('projectModal');
     modal.classList.remove('show');
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = '';
+    // 動画の再生を止める
+    document.getElementById('modalYoutube').src = '';
 }
 
 // ESCキーでモーダルを閉じる

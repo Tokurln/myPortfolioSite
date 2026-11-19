@@ -1,0 +1,52 @@
+[
+  {
+    "title": "しなだマンの中テレ占拠",
+    "description": "テレビスタジオのモデリング・Unityでのエフェクトの作成を担当。",
+    "tech": ["Unity", "Blender"],
+    "period": "2025年 11月～12月",
+    "image": "",
+    "explanation": "2025年12月6~7日に福島ビッグパレッドで開催された中テレ祭りの中テレテクノロジーラボにて、展示された「しなだマンの中テレ占拠」。暴走したしなだマンと中テレ君を銃で撃破するゲームです。",
+    "role": "テレビスタジオのモデリング、Unityでのエフェクト実装",
+    "youtube": "https://www.youtube.com/embed/nNAIxISfTwo"
+  },
+  {
+    "title": "Keep Mining!",
+    "description": "チームリーダーとして、UnityとBlenderを用いたゲーム開発プロジェクトを管理・ロジック・3Dモデルの実装。",
+    "tech": ["Unity", "C#", "Blender"],
+    "period": "2025年 8月～9月",
+    "image": "",
+    "explanation": "会津大学の蒼翔祭で展示したVRゲーム。プレイヤーは高スコアを目指し、ひたすらに穴を掘っていきます。",
+    "role": "チームリーダー、ゲームロジック実装、3Dモデル制作、プロジェクト管理",
+    "youtube": "https://www.youtube.com/embed/HfYnKL4QkV4"
+  },
+  {
+    "title": "HATO",
+    "description": "アプリ内で使用する3Dモデルの作成を担当。",
+    "tech": ["Blender"],
+    "period": "2025年 6月",
+    "image": "",
+    "explanation": "Aizu Huckで作成したiOS向けのモバイルアプリ。Apple Musicで再生した音楽に基づいて、ユーザーの気持ちが3Dモデルとして表現されます。",
+    "role": "3Dモデル制作、テクスチャ作成、アニメーション設定",
+    "youtube": ""
+  },
+  {
+    "title": "音ライブ",
+    "description": "ゲーム内で使用する3Dモデルの作成を担当。",
+    "tech": ["Blender"],
+    "period": "2025年 2月～3月",
+    "image": "",
+    "explanation": "新入生歓迎会向けに作成したVRゲーム。落ちてくるノーツに合わせて操作し、スコアを稼いでいきます。",
+    "role": "キャラクター3Dモデル制作、ダンスアニメーション、ステージデザイン",
+    "youtube": ""
+  },
+  {
+    "title": "ゾンビ無双",
+    "description": "ゲーム内で使用する武器の3Dモデルの作成を担当。",
+    "tech": ["Blender"],
+    "period": "2025年 6月",
+    "image": "",
+    "explanation": "ゾンビを倒すアクションゲーム。様々な武器でゾンビを撃退し、ステージをクリアしていきます。",
+    "role": "武器3Dモデル制作、キャラクターデザイン、テクスチャ作成",
+    "youtube": "https://www.youtube.com/embed/x6cFj1lezHE"
+  }
+]

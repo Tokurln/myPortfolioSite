@@ -1117,7 +1117,8 @@ a.game-card:hover {
 
 .modal-extra-section,
 .modal-video-section,
-.modal-tweet-section {
+.modal-tweet-section,
+.modal-link-section {
     margin-top: 20px;
 }
 
@@ -1138,6 +1139,40 @@ a.game-card:hover {
 
 .modal-tweet + .modal-tweet {
     margin-top: 12px;
+}
+
+/* .md の links: に書いたその他のリンク */
+.modal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.modal-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-dark);
+    text-decoration: none;
+    word-break: break-all;
+    background: var(--accent-soft);
+    border: 1px solid #c8d8f6;
+    border-radius: var(--radius);
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.modal-links a::after {
+    content: '↗';
+    font-size: 11px;
+}
+
+.modal-links a:hover {
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
 }
 
 /* ========== フッター ========== */

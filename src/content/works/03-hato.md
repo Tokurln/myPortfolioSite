@@ -6,6 +6,7 @@ role: 3Dモデル制作、テクスチャ作成、アニメーション設定
 image: 
 youtube: 
 twitter:
+links:
 order: 3
 draft: false
 ---

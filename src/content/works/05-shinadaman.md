@@ -6,6 +6,7 @@ role: テレビスタジオのモデリング、Unityでのエフェクト実装
 image: 
 youtube: https://www.youtube.com/embed/nNAIxISfTwo
 twitter:
+links:
 order: 5
 draft: false
 ---

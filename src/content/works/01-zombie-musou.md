@@ -6,6 +6,7 @@ role: 武器3Dモデル制作、キャラクターデザイン、テクスチャ
 image: 
 youtube: https://www.youtube.com/embed/x6cFj1lezHE
 twitter:
+links:
 order: 1
 draft: false
 ---

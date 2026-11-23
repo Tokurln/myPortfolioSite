@@ -6,6 +6,7 @@ role: チームリーダー、ゲームロジック実装、3Dモデル制作、
 image: 
 youtube: https://www.youtube.com/embed/HfYnKL4QkV4
 twitter:
+links:
 order: 4
 draft: false
 ---

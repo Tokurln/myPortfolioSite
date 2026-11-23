@@ -21,13 +21,24 @@
         "main": false,
         "hidden": false
     },
+        {
+        "name": "Zli",
+        "type": "サークル",
+        "role": "メンバー",
+        "since": "2024年4月",
+        "until": "",
+        "url": "https://zli.works/",
+        "note": "技術・LTサークル",
+        "main": false,
+        "hidden": false
+    },
     {
         "name": "iwaken Lab.",
         "type": "コミュニティ",
         "role": "メンバー",
         "since": "2026年4月",
         "until": "",
-        "url": "",
+        "url": "https://www.iwakenlab.jp/",
         "note": "XRコミュニティ",
         "main": false,
         "hidden": false

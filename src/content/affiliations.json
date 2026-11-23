@@ -1,0 +1,35 @@
+[
+    {
+        "name": "会津大学 コンピュータ理工学部",
+        "type": "大学",
+        "role": "学部生",
+        "since": "2024年4月",
+        "until": "",
+        "url": "https://www.u-aizu.ac.jp/",
+        "note": "",
+        "main": true,
+        "hidden": false
+    },
+    {
+        "name": "A-PxL",
+        "type": "サークル",
+        "role": "2026年度代表",
+        "since": "2024年4月",
+        "until": "",
+        "url": "https://sites.google.com/view/a-pxl",
+        "note": "XR作品の作成・勉強会の開催",
+        "main": false,
+        "hidden": false
+    },
+    {
+        "name": "iwaken Lab.",
+        "type": "コミュニティ",
+        "role": "メンバー",
+        "since": "2026年4月",
+        "until": "",
+        "url": "",
+        "note": "XRコミュニティ",
+        "main": false,
+        "hidden": false
+    }
+]

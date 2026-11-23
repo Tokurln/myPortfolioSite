@@ -1,7 +1,7 @@
 ---
 # 書き終わったら draft を false にすると、サイトに表示されます
 title: Dream Ever Garden
-tech: [Unity, C#, Blender]
+tech: [Unity, C#, Blender, VFX, Shader]
 period: 2026年 7月～8月
 role: 世界設定作成。チームマネジメント。同期・非同期オンライン実装。一部アセット作成。
 image: images/works/ShapeOfDreams.jpg

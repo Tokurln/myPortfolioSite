@@ -1,9 +1,9 @@
 ---
 title: しなだマンの中テレ占拠
-tech: [Unity, Blender]
+tech: [Unity, C#, Blender]
 period: 2025年 11月～12月
 role: テレビスタジオのモデリング、Unityでのエフェクト実装
-image: 
+image: images/works/Shinadaman.png
 youtube: https://www.youtube.com/embed/nNAIxISfTwo
 twitter:
 links:

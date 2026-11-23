@@ -4,204 +4,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Portfolio</title>
+    <title>Tokurin | Portfolio</title>
+    <meta name="description" content="Rin Imai（Game Developer / 3D Artist）のポートフォリオ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Cinzel:wght@600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- ナビゲーション -->
-    <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">My Portfolio</h1>
-            <ul class="nav-links">
-                <li><a href="#about">Profile</a></li>
-                <li><a href="#projects">Works</a></li>
-                <li><a href="#skills">Skills & Tools</a></li>
+    <!-- トップバー（リンクは src/content/profile.js から生成） -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span class="topbar-title">PORTFOLIO</span>
+            <ul class="topbar-links" data-links="icon"></ul>
+        </div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#home" class="brand">
+                <span class="brand-name">Rin Imai</span>
+                <span class="brand-sub">Game Developer / 3D Artist</span>
+            </a>
+            <a href="#character" class="header-character">
+                <img src="images/works/PigeonIcon2.png" alt="" width="44" height="44">
+                <span>
+                    <span class="header-character-label">My Character</span>
+                    <span class="header-character-name">Rin Imai</span>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- グローバルナビ -->
+    <nav class="gnav" aria-label="メインメニュー">
+        <div class="container gnav-inner">
+            <button class="gnav-toggle" type="button" aria-expanded="false" aria-controls="gnavMenu">
+                <span class="gnav-toggle-bar"></span>
+                <span class="gnav-toggle-label">MENU</span>
+            </button>
+            <ul class="gnav-menu" id="gnavMenu">
+                <li><a href="#home"><span class="gnav-en">HOME</span><span class="gnav-ja">トップ</span></a></li>
+                <li><a href="#works"><span class="gnav-en">WORKS</span><span class="gnav-ja">作品</span></a></li>
+                <li><a href="#profile"><span class="gnav-en">PROFILE</span><span class="gnav-ja">プロフィール</span></a></li>
+                <li><a href="#skills"><span class="gnav-en">SKILLS</span><span class="gnav-ja">スキル</span></a></li>
+                <li><a href="#contact"><span class="gnav-en">CONTACT</span><span class="gnav-ja">連絡先</span></a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 自己紹介セクション -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <!-- 左: 見出し・名前・役職 / 右: 画像 -->
-                    <div class="profile-header">
-                        <div class="profile-heading">
-                            <h2>Profile</h2>
-                            <div>
-                                <h3>Rin Imai</h3>
-                                <p class="subtitle">Game Developer / 3D Artist</p>
+    <div class="page" id="home">
+        <div class="container layout">
+            <!-- ========== メインカラム ========== -->
+            <main class="main">
+                <!-- ヒーロー：画像のある作品をスライド表示 -->
+                <section class="hero" aria-label="注目の作品">
+                    <div class="hero-slides"></div>
+                    <div class="hero-dots" role="tablist"></div>
+                </section>
+
+                <!-- Works -->
+                <section id="works" class="panel">
+                    <h2 class="panel-title"><span class="panel-title-en">WORKS</span>作品一覧</h2>
+                    <!-- タブは作品の tech から自動生成 -->
+                    <div class="tabs works-tabs" role="tablist" aria-label="使用ツールで絞り込み"></div>
+                    <div class="panel-body">
+                        <!-- 作品カードは src/content/works/*.md から自動生成 -->
+                        <div class="project-grid"></div>
+                    </div>
+                </section>
+
+                <!-- Profile -->
+                <section id="profile" class="panel">
+                    <h2 class="panel-title"><span class="panel-title-en">PROFILE</span>プロフィール</h2>
+                    <div class="panel-body">
+                        <dl class="info-list">
+                            <div class="info-item">
+                                <dt>専門分野</dt>
+                                <dd>ゲーム開発、3Dモデリング、VFX</dd>
+                            </div>
+                            <div class="info-item">
+                                <dt>興味分野</dt>
+                                <dd>VR/AR技術、ゲーム開発、VFX、シェーダー</dd>
+                            </div>
+                        </dl>
+                        <!-- 所属・サークル・コミュニティは src/content/affiliations.json から生成 -->
+                        <div class="affiliation-block">
+                            <h3 class="sub-title">所属・コミュニティ</h3>
+                            <ul class="affiliation-list"></ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills & Tools -->
+                <section id="skills" class="panel">
+                    <h2 class="panel-title"><span class="panel-title-en">SKILLS &amp; TOOLS</span>スキル・ツール</h2>
+                    <div class="tabs" role="tablist" aria-label="スキルとツール">
+                        <button class="tab is-active" type="button" role="tab" aria-selected="true"
+                            data-skill-tab="skills">Skills</button>
+                        <button class="tab" type="button" role="tab" aria-selected="false"
+                            data-skill-tab="tools">Tools</button>
+                    </div>
+                    <div class="panel-body">
+                        <div class="skills-grid" data-skill-panel="skills">
+                            <div class="skill-card">
+                                <h3>Programming Languages</h3>
+                                <ul>
+                                    <li>C#</li>
+                                    <li>C</li>
+                                    <li>Swift</li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <h3>Game Development</h3>
+                                <ul>
+                                    <li>Unity</li>
+                                    <li>Unreal Engine 5</li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <h3>3D Modeling</h3>
+                                <ul>
+                                    <li>Blender</li>
+                                    <li>Houdini</li>
+                                </ul>
                             </div>
                         </div>
-                        <img src="images/works/PigeonIcon2.png" alt="Rin Imai のアイコン" class="profile-icon" width="240"
-                            height="240">
+                        <div class="skills-grid" data-skill-panel="tools" hidden>
+                            <div class="skill-card">
+                                <h3>Development Tools</h3>
+                                <ul>
+                                    <li>Visual Studio Code</li>
+                                    <li>Visual Studio</li>
+                                    <li>Xcode</li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <h3>Design Tools</h3>
+                                <ul>
+                                    <li>Figma</li>
+                                    <li>Adobe After Effects</li>
+                                    <li>Adobe Photoshop</li>
+                                    <li>Adobe Illustrator</li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <h3>Management Tools</h3>
+                                <ul>
+                                    <li>Discord</li>
+                                    <li>GitHub</li>
+                                    <li>Notion</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-info">
-                        <div class="info-item">
-                            <strong>所属:</strong>
-                            <p>会津大学 コンピュータ理工学部</p>
-                        </div>
-                        <div class="info-item">
-                            <strong>専門分野:</strong>
-                            <p>ゲーム開発、3Dモデリング</p>
-                        </div>
-                        <div class="info-item">
-                            <strong>興味分野:</strong>
-                            <p>VR/AR技術、ゲーム開発</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
 
-    <!-- プロジェクトセクション -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Products</h2>
-            <!-- 作品カードは src/content/works/*.md から自動生成 -->
-            <div class="project-grid"></div>
+                <!-- Contact（内容は src/content/profile.js の contact） -->
+                <section id="contact" class="panel">
+                    <h2 class="panel-title"><span class="panel-title-en">CONTACT</span>連絡先</h2>
+                    <div class="panel-body contact-body">
+                        <p class="contact-message"></p>
+                        <ul class="contact-links" data-links="button"></ul>
+                    </div>
+                </section>
+            </main>
+
+            <!-- ========== サイドバー ========== -->
+            <aside class="sidebar" id="character">
+                <section class="side-box character-card">
+                    <h2 class="side-title">CHARACTER</h2>
+                    <div class="character-body">
+                        <img src="images/works/PigeonIcon2.png" alt="Rin Imai のアイコン" class="character-icon"
+                            width="120" height="120">
+                        <p class="character-name">Rin Imai</p>
+                        <p class="character-role">Game Developer / 3D Artist</p>
+                    </div>
+                </section>
+
+                <section class="side-box">
+                    <h2 class="side-title">LINKS</h2>
+                    <ul class="side-links" data-links="banner"></ul>
+                </section>
+
+                <!-- ゲームのキャラは src/content/profile.js の games -->
+                <section class="side-box">
+                    <h2 class="side-title">GAME CHARACTERS</h2>
+                    <ul class="game-list"></ul>
+                </section>
+
+                <section class="side-box">
+                    <h2 class="side-title">NEW WORKS</h2>
+                    <ul class="news-list"></ul>
+                </section>
+            </aside>
         </div>
-    </section>
+    </div>
 
     <!-- プロジェクト詳細モーダル -->
-    <div id="projectModal" class="modal">
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="modal-body-wrapper">
-                <div class="modal-image-section">
-                    <img id="modalImage" alt="" class="modal-image" hidden>
-                    <div id="modalImagePlaceholder" class="modal-image-placeholder">No Image</div>
-                </div>
-                <div class="modal-info-section">
-                    <h3 id="modalTitle"></h3>
-                    <div class="modal-section" id="modalExplanationSection">
-                        <h4>作品の説明</h4>
-                        <div id="modalExplanation" class="modal-text"></div>
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="modal-close" type="button" aria-label="閉じる">&times;</button>
+            </div>
+            <div class="modal-scroll">
+                <div class="modal-body-wrapper">
+                    <div class="modal-image-section">
+                        <img id="modalImage" alt="" class="modal-image" hidden>
+                        <div id="modalImagePlaceholder" class="modal-image-placeholder">No Image</div>
                     </div>
-                    <div class="modal-section">
-                        <h4>担当内容</h4>
-                        <p id="modalRole"></p>
+                    <div class="modal-info-section">
+                        <div class="modal-section" id="modalExplanationSection">
+                            <h4>作品の説明</h4>
+                            <div id="modalExplanation" class="modal-text"></div>
+                        </div>
+                        <div class="modal-section">
+                            <h4>担当内容</h4>
+                            <p id="modalRole"></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- .md の「## 実装内容」などはここに表示 -->
-            <div id="modalExtraSections"></div>
-            <div class="modal-video-section">
-                <h4>動画</h4>
-                <iframe id="modalYoutube" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <!-- .md の twitter: に書いたポストを埋め込む -->
-            <div class="modal-tweet-section" id="modalTweetSection" hidden>
-                <h4>X (Twitter)</h4>
-                <div id="modalTweets"></div>
-            </div>
-            <!-- .md の links: に書いたその他のリンク -->
-            <div class="modal-link-section" id="modalLinkSection" hidden>
-                <h4>Links</h4>
-                <ul id="modalLinks" class="modal-links"></ul>
+                <!-- .md の「## 実装内容」などはここに表示 -->
+                <div id="modalExtraSections"></div>
+                <div class="modal-video-section">
+                    <h4>動画</h4>
+                    <div class="modal-video-frame">
+                        <iframe id="modalYoutube" title="作品の動画" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- .md の twitter: に書いたポストを埋め込む -->
+                <div class="modal-tweet-section" id="modalTweetSection" hidden>
+                    <h4>X (Twitter)</h4>
+                    <div id="modalTweets"></div>
+                </div>
+                <!-- .md の links: に書いたその他のリンク -->
+                <div class="modal-link-section" id="modalLinkSection" hidden>
+                    <h4>Links</h4>
+                    <ul id="modalLinks" class="modal-links"></ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- スキル & ツールセクション -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills & Tools</h2>
-            <div class="combined-section">
-                <!-- スキル部分 -->
-                <div class="skills-part">
-                    <h3>Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <h4>Programming Languages</h4>
-                            <div class="skill-item">
-                                <span class="skill-name">C#</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">C</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Swift</span>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <h4>Game Development</h4>
-                            <div class="skill-item">
-                                <span class="skill-name">Unity</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Unreal Engine 5</span>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <h4>3D Modeling</h4>
-                            <div class="skill-item">
-                                <span class="skill-name">Blender</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Houdini</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ツール部分 -->
-                <div class="tools-part">
-                    <h3>Tools</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <h4>Development Tools</h4>
-                            <div class="skill-item">
-                                <span class="skill-name">Visual Studio Code</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Visual Studio</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Xcode</span>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <h4>Design Tools</h4>
-                            <div class="skill-item">
-                                <span class="skill-name">Figma</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Adobe After Effects</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Adobe Photoshop</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Adobe Illustrator</span>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <h4>Management Tools</h4>
-                            <div class="skill-item">
-                                <span class="skill-name">Discord</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Github</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Notion</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- フッター -->
     <footer class="footer">
-        <p>&copy; 2026 Rin Imai. All rights reserved.</p>
-        <a class="footer-link" href="https://github.com/Tokurln" target="_blank" rel="noreferrer">Github</a>
-        <a class="footer-link" href="https://x.com/tokurin_athome" target="_blank" rel="noreferrer">Twitter</a>
-        <a class="footer-link" href="https://qiita.com/tokurin" target="_blank" rel="noreferrer">Qiita</a>
+        <div class="container footer-inner">
+            <ul class="footer-links" data-links="text"></ul>
+            <a href="#home" class="footer-top">PAGE TOP ▲</a>
+            <p class="footer-copy">&copy; 2026 Rin Imai. All rights reserved.</p>
+        </div>
     </footer>
 
     <script type="module" src="/src/main.js"></script>

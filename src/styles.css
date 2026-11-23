@@ -689,6 +689,107 @@ ul {
     padding: 10px 14px;
 }
 
+/* 所属・コミュニティ */
+.affiliation-block {
+    margin-top: 20px;
+}
+
+.sub-title {
+    margin-bottom: 10px;
+    padding: 4px 10px;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--bg-sub);
+    border-left: 3px solid var(--accent);
+}
+
+.affiliation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.affiliation {
+    position: relative;
+    padding: 10px 14px 10px 30px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.affiliation::before {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 19px;
+    width: 7px;
+    height: 7px;
+    background: var(--border-strong);
+    transform: rotate(45deg);
+}
+
+.affiliation.is-main {
+    border-color: var(--gold);
+    background: #fdfaf1;
+}
+
+.affiliation.is-main::before {
+    background: var(--gold);
+}
+
+.affiliation-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+}
+
+.affiliation-type {
+    padding: 0 8px;
+    font-size: 11px;
+    line-height: 20px;
+    color: #fff;
+    background: var(--dark-3);
+    border-radius: 2px;
+}
+
+.affiliation-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+a.affiliation-name {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a.affiliation-name:hover {
+    text-decoration: underline;
+}
+
+.affiliation-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 16px;
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+.affiliation-role {
+    font-weight: 500;
+    color: var(--accent-dark);
+}
+
+.affiliation-period {
+    color: var(--text-faint);
+}
+
+.affiliation-note {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--text-sub);
+}
+
 /* ========== Skills ========== */
 .skills-grid {
     display: grid;
@@ -831,6 +932,10 @@ ul {
     font-size: 12px;
     color: var(--text-sub);
     border-top: 1px solid var(--border);
+}
+
+.character-affiliation span {
+    display: block;
 }
 
 /* リンク集（バナー風） */

@@ -83,10 +83,6 @@
                     <div class="panel-body">
                         <dl class="info-list">
                             <div class="info-item">
-                                <dt>所属</dt>
-                                <dd>会津大学 コンピュータ理工学部</dd>
-                            </div>
-                            <div class="info-item">
                                 <dt>専門分野</dt>
                                 <dd>ゲーム開発、3Dモデリング</dd>
                             </div>
@@ -95,6 +91,11 @@
                                 <dd>VR/AR技術、ゲーム開発</dd>
                             </div>
                         </dl>
+                        <!-- 所属・サークル・コミュニティは src/content/affiliations.json から生成 -->
+                        <div class="affiliation-block">
+                            <h3 class="sub-title">所属・コミュニティ</h3>
+                            <ul class="affiliation-list"></ul>
+                        </div>
                     </div>
                 </section>
 
@@ -181,7 +182,8 @@
                             width="120" height="120">
                         <p class="character-name">Rin Imai</p>
                         <p class="character-role">Game Developer / 3D Artist</p>
-                        <p class="character-affiliation">会津大学 コンピュータ理工学部</p>
+                        <!-- affiliations.json で main: true の所属を表示 -->
+                        <p class="character-affiliation"></p>
                     </div>
                 </section>
 

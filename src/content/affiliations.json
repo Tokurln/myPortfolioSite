@@ -1,0 +1,24 @@
+[
+    {
+        "name": "会津大学 コンピュータ理工学部",
+        "type": "大学",
+        "role": "学部生",
+        "since": "",
+        "until": "",
+        "url": "https://www.u-aizu.ac.jp/",
+        "note": "",
+        "main": true,
+        "hidden": false
+    },
+    {
+        "name": "サークル・コミュニティ名（記入例）",
+        "type": "サークル",
+        "role": "代表",
+        "since": "2024年4月",
+        "until": "",
+        "url": "",
+        "note": "活動内容などをひとこと",
+        "main": false,
+        "hidden": true
+    }
+]

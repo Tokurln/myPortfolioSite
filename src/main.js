@@ -4,6 +4,7 @@ import { profile } from './content/profile.js';
 import { renderWorksTabs } from './js/projects.js';
 import { renderHero } from './js/hero.js';
 import { renderSidebar } from './js/sidebar.js';
+import { renderAffiliations } from './js/affiliations.js';
 import { initModal, openProjectModal } from './js/modal.js';
 
 // 作品カード（タブで絞り込み）を src/content/works/*.md から生成
@@ -15,6 +16,7 @@ renderWorksTabs(
 );
 renderHero(document.querySelector('.hero'), works, openProjectModal);
 renderSidebar(profile, works, openProjectModal);
+renderAffiliations();
 initModal();
 
 // Skills / Tools のタブ切り替え

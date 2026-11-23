@@ -72,12 +72,33 @@ export function renderHero(root, works, onSelect) {
         dots[current].classList.add('is-active');
     }
 
+    let paused = false;
+
     function restart() {
         clearInterval(timer);
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (paused || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         timer = setInterval(() => show((current + 1) % slides.length), INTERVAL);
     }
 
+    // モーダルを開いている間は、切り替えもズームも止める（裏で動くとモーダルのスクロールが重くなる）
+    function pause() {
+        paused = true;
+        clearInterval(timer);
+        const img = slides[current].querySelector('img');
+        img.style.transform = getComputedStyle(img).transform; // 今のズーム位置で固定
+        img.style.transition = 'none';
+    }
+
+    function resume() {
+        paused = false;
+        const img = slides[current].querySelector('img');
+        img.style.transform = '';
+        img.style.transition = '';
+        restart();
+    }
+
+    document.addEventListener('modal:open', pause);
+    document.addEventListener('modal:close', resume);
     root.addEventListener('mouseenter', () => clearInterval(timer));
     root.addEventListener('mouseleave', restart);
     restart();

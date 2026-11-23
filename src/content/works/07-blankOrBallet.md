@@ -5,7 +5,7 @@ tech: [Unity, C#]
 period: 2026年 2月～3月
 # モーダルの「担当内容」
 role: Untiy班として、VRの補助的機能の実装。Netcode for GameObjectを使用したオンラインマルチの実装。ゲームロジックのつなぎこみ。
-image: images/works/Blank.png
+image: images/works/Blank.webp
 youtube:
 twitter:
 links:

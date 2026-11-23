@@ -5,7 +5,7 @@ tech: [Unity, C#, Twitch]
 period: 2026年 2月～3月
 # モーダルの「担当内容」
 role: チームマネジメント、Unity機能実装、Twitch連携実装
-image: images/works/Streal.png
+image: images/works/Streal.webp
 youtube:
 twitter: https://x.com/Atelier_Vision_/status/2037128383763800523?a=OkLUSKD8zc6mIwMF4Ho&s=20
 links:

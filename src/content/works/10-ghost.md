@@ -4,7 +4,7 @@ title: Resident Ghost
 tech: [Unity, C#, Blender, VFX, Shader]
 period: 2026年 8月～10月
 role: VR機能実装、チームマネジメント
-image: images/works/ResidentGhost.jpg
+image: images/works/ResidentGhost.webp
 youtube: https://youtu.be/0Rzw3y8Yefk?si=nP1-dccaLY2I1dCK
 twitter: https://x.com/aizu_PxL/status/2108200879316992126?a=upC-o0tJ-UOkajLcu38&s=20
 links:

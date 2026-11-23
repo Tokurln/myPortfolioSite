@@ -1,11 +1,11 @@
 import './styles.css';
-import projects from './data/projects.json';
+import { works } from './js/works.js';
 import { renderProjects } from './js/projects.js';
 import { initModal, openProjectModal } from './js/modal.js';
 
-// 作品カードを JSON から生成
+// 作品カードを src/content/works/*.md から生成
 const grid = document.querySelector('.project-grid');
-renderProjects(grid, projects, openProjectModal);
+renderProjects(grid, works, openProjectModal);
 
 initModal();
 

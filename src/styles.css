@@ -191,10 +191,31 @@ body {
     background: #2a2a4e;
     border: 1px solid #3a3a5e;
     border-radius: 8px;
-    padding: 2rem;
+    overflow: hidden; /* サムネイルの角をカードに合わせて丸める */
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+}
+
+/* カード上部のサムネイル（16:9 で切り抜き） */
+.project-thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background-color: #1e1e3a;
+}
+
+.project-thumb-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1rem;
+}
+
+.project-card-body {
+    padding: 1.5rem 2rem 2rem;
 }
 
 .project-card:hover {
@@ -204,18 +225,11 @@ body {
 
 .project-card h3 {
     color: #ffffff;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .project-card p {
     color: #e0e0e0;
-}
-
-.project-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1rem !important;
-    text-align: left;
 }
 
 .project-tech {
@@ -360,6 +374,75 @@ body {
 #modalRole {
     color: #e0e0e0;
     line-height: 1.8;
+}
+
+/* .md の本文（段落・箇条書き） */
+.modal-text {
+    color: #e0e0e0;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.modal-text p + p,
+.modal-text p + ul,
+.modal-text ul + p {
+    margin-top: 0.75rem;
+}
+
+.modal-text ul {
+    padding-left: 1.25rem;
+}
+
+.modal-text li + li {
+    margin-top: 0.25rem;
+}
+
+.modal-section[hidden] {
+    display: none;
+}
+
+/* X(Twitter) の埋め込み */
+.modal-tweet-section {
+    border-top: 1px solid #3a3a5e;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.modal-tweet-section[hidden] {
+    display: none;
+}
+
+.modal-tweet-section h4 {
+    color: #a8daff;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.modal-tweet {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-tweet + .modal-tweet {
+    margin-top: 1rem;
+}
+
+.modal-tweet a {
+    color: #a8daff;
+}
+
+/* 「## 実装内容」などの追加セクション（横幅いっぱい） */
+.modal-extra-section {
+    border-top: 1px solid #3a3a5e;
+    padding: 2rem 0;
+}
+
+.modal-extra-section h4 {
+    color: #a8daff;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .modal-video-section {

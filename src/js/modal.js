@@ -136,7 +136,7 @@ async function renderTweets(urls) {
     for (const [i, id] of ids.entries()) {
         const slot = slots[i];
         const tweet = await window.twttr.widgets.createTweet(id, slot, {
-            theme: 'dark',
+            theme: 'light',
             lang: 'ja',
             dnt: true,
             align: 'center',

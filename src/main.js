@@ -5,6 +5,7 @@ import { renderWorksTabs } from './js/projects.js';
 import { renderHero } from './js/hero.js';
 import { renderSidebar } from './js/sidebar.js';
 import { renderAffiliations } from './js/affiliations.js';
+import { renderHistory } from './js/history.js';
 import { initModal, openProjectModal } from './js/modal.js';
 
 // モーダルの閉じるボタンなどは、他の描画でエラーが出ても効くように最初に登録する
@@ -20,6 +21,7 @@ renderWorksTabs(
 renderHero(document.querySelector('.hero'), works, openProjectModal);
 renderSidebar(profile, works, openProjectModal);
 renderAffiliations();
+renderHistory(works, openProjectModal);
 
 // Skills / Tools のタブ切り替え
 const skillTabs = document.querySelectorAll('[data-skill-tab]');

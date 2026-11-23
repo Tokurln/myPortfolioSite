@@ -12,4 +12,4 @@ order: 3
 draft: false
 ---
 
-Aizu Huckで作成したiOS向けのモバイルアプリ。Apple Musicで再生した音楽に基づいて、ユーザーの気持ちが3Dモデルとして表現されます。
+Aizu Hackで作成したiOS向けのモバイルアプリ。Apple Musicで再生した音楽に基づいて、ユーザーの気持ちが3Dモデルとして表現されます。

@@ -65,6 +65,16 @@ function splitBody(body) {
     };
 }
 
+// "GitHub|https://github.com/..." → { label: 'GitHub', url: 'https://github.com/...' }
+// 表示名がなければ URL をそのまま表示名にする
+function parseLink(item) {
+    const bar = String(item).indexOf('|');
+    const label = bar === -1 ? '' : String(item).slice(0, bar).trim();
+    const url = (bar === -1 ? String(item) : String(item).slice(bar + 1)).trim();
+    if (!/^https?:\/\//.test(url)) return null;
+    return { label: label || url, url };
+}
+
 function parseWork(path, raw) {
     const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
     if (!match) {
@@ -82,6 +92,8 @@ function parseWork(path, raw) {
         youtube: data.youtube ?? '',
         // X(Twitter) のポストURL。1つなら文字列、複数なら [url1, url2]
         twitter: [].concat(data.twitter ?? []).filter(Boolean),
+        // その他のリンク。「表示名|URL」または URL だけ。複数なら [表示名|URL1, 表示名|URL2]
+        links: [].concat(data.links ?? []).filter(Boolean).map(parseLink).filter(Boolean),
         order: typeof data.order === 'number' ? data.order : -Infinity,
         draft: data.draft === true,
         explanation,

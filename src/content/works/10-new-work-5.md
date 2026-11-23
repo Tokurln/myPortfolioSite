@@ -1,25 +1,21 @@
 ---
 # 書き終わったら draft を false にすると、サイトに表示されます
-title: 新しい作品 5
-# 使ったツール（カンマ区切り）
+title: Resident Ghost
 tech: [Unity, Blender]
-period: 2026年 1月
-# モーダルの「担当内容」
-role: ここに担当した作業を書く
-# 画像は public/images/works/ に置いて、images/works/ファイル名 と書く（なければ空欄）
-image:
-# YouTube の埋め込みURL https://www.youtube.com/embed/動画ID（なければ空欄）
-youtube:
-# X(Twitter) のポストURL https://x.com/ユーザー名/status/数字（複数なら [URL1, URL2]、なければ空欄）
-twitter:
-# 古い作品ほど小さい数字にする（サイトでは大きい数字＝新しい作品が上に表示される）
+period: 2026年 8月～10月
+role: VR機能実装、チームマネジメント
+image: images/works/ResidentGhost.jpg
+youtube: https://youtu.be/0Rzw3y8Yefk?si=nP1-dccaLY2I1dCK
+twitter: https://x.com/aizu_PxL/status/2108200879316992126?a=upC-o0tJ-UOkajLcu38&s=20
+links:
 order: 10
-draft: true
+draft: false
 ---
 
-ここに「ゲームの説明」を書く（モーダルに表示される本文）。
+あなたは洋館に閉じ込められました！
+逃げてください！
 
 ## 実装内容
 
-- ここに実装したことを書く
-- 箇条書きは「- 」で始める
+- VR機能実装
+- 他メンバーの実装内容を本番用に修正・実装

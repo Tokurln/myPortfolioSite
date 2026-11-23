@@ -1,0 +1,52 @@
+[
+    {
+        "date": "2026-08",
+        "type": "コンテスト",
+        "title": "IVRC 2026 メタバース部門（国際学生対抗バーチャルリアリティコンテスト）",
+        "result": "一次審査落選",
+        "url": "https://ivrc.net/2026_metaverse/seed-stage/",
+        "work": "Dream Ever Garden",
+        "note": "VR作品のコンテスト",
+        "hidden": false
+    },
+        {
+        "date": "2026-01",
+        "type": "勉強会",
+        "title": "ios bootcamp",
+        "result": "",
+        "url": "",
+        "work": "",
+        "note": "4か月間ほどのios勉強会",
+        "hidden": false
+    },
+    {
+        "date": "2026-06",
+        "type": "ハッカソン",
+        "title": "ブラッカソン",
+        "result": "",
+        "url": "",
+        "work": "ブラッカソンもくもくMR",
+        "note": "2日間のハッカソン",
+        "hidden": false
+    },
+    {
+        "date": "2025-06",
+        "type": "ハッカソン",
+        "title": "Re Aizu Hack",
+        "result": "",
+        "url": "https://zli.connpass.com/event/349133/",
+        "work": "HATO",
+        "note": "1週間のハッカソン",
+        "hidden": false
+    },
+    {
+        "date": "2024-10",
+        "type": "コンテスト",
+        "title": "IVRC 2024 メタバース部門（国際学生対抗バーチャルリアリティコンテスト）",
+        "result": "IVRCメタバース部門最優秀賞受賞",
+        "url": "https://vrchat.com/home/launch?worldId=wrld_0bf82d2d-3e65-4ce9-9a79-47e382e5c82c",
+        "work": "Shape of Kizuna",
+        "note": "VR作品のコンテスト",
+        "hidden": false
+    }
+]

@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <!-- トップバー（リンクは src/content/profile.js から生成） -->
     <div class="topbar">
         <div class="container topbar-inner">
             <span class="topbar-title">PORTFOLIO</span>
@@ -22,7 +21,6 @@
         </div>
     </div>
 
-    <!-- ヘッダー -->
     <header class="header">
         <div class="container header-inner">
             <a href="#home" class="brand">
@@ -39,7 +37,6 @@
         </div>
     </header>
 
-    <!-- グローバルナビ -->
     <nav class="gnav" aria-label="メインメニュー">
         <div class="container gnav-inner">
             <button class="gnav-toggle" type="button" aria-expanded="false" aria-controls="gnavMenu">
@@ -50,6 +47,7 @@
                 <li><a href="#home"><span class="gnav-en">HOME</span><span class="gnav-ja">トップ</span></a></li>
                 <li><a href="#works"><span class="gnav-en">WORKS</span><span class="gnav-ja">作品</span></a></li>
                 <li><a href="#profile"><span class="gnav-en">PROFILE</span><span class="gnav-ja">プロフィール</span></a></li>
+                <li><a href="#history"><span class="gnav-en">HISTORY</span><span class="gnav-ja">実績</span></a></li>
                 <li><a href="#skills"><span class="gnav-en">SKILLS</span><span class="gnav-ja">スキル</span></a></li>
                 <li><a href="#contact"><span class="gnav-en">CONTACT</span><span class="gnav-ja">連絡先</span></a></li>
             </ul>
@@ -58,40 +56,33 @@
 
     <div class="page" id="home">
         <div class="container layout">
-            <!-- ========== メインカラム ========== -->
             <main class="main">
-                <!-- ヒーロー：画像のある作品をスライド表示 -->
                 <section class="hero" aria-label="注目の作品">
                     <div class="hero-slides"></div>
                     <div class="hero-dots" role="tablist"></div>
                 </section>
 
-                <!-- Works -->
                 <section id="works" class="panel">
                     <h2 class="panel-title"><span class="panel-title-en">WORKS</span>作品一覧</h2>
-                    <!-- タブは作品の tech から自動生成 -->
                     <div class="tabs works-tabs" role="tablist" aria-label="使用ツールで絞り込み"></div>
                     <div class="panel-body">
-                        <!-- 作品カードは src/content/works/*.md から自動生成 -->
                         <div class="project-grid"></div>
                     </div>
                 </section>
 
-                <!-- Profile -->
                 <section id="profile" class="panel">
                     <h2 class="panel-title"><span class="panel-title-en">PROFILE</span>プロフィール</h2>
                     <div class="panel-body">
                         <dl class="info-list">
                             <div class="info-item">
                                 <dt>専門分野</dt>
-                                <dd>ゲーム開発、3Dモデリング、VFX</dd>
+                                <dd>ゲーム開発、3Dモデリング</dd>
                             </div>
                             <div class="info-item">
                                 <dt>興味分野</dt>
-                                <dd>VR/AR技術、ゲーム開発、VFX、シェーダー</dd>
+                                <dd>VR/AR技術、ゲーム開発、VFX、Shader</dd>
                             </div>
                         </dl>
-                        <!-- 所属・サークル・コミュニティは src/content/affiliations.json から生成 -->
                         <div class="affiliation-block">
                             <h3 class="sub-title">所属・コミュニティ</h3>
                             <ul class="affiliation-list"></ul>
@@ -99,7 +90,13 @@
                     </div>
                 </section>
 
-                <!-- Skills & Tools -->
+                <section id="history" class="panel">
+                    <h2 class="panel-title"><span class="panel-title-en">HISTORY</span>実績・経歴</h2>
+                    <div class="panel-body">
+                        <ol class="history"></ol>
+                    </div>
+                </section>
+
                 <section id="skills" class="panel">
                     <h2 class="panel-title"><span class="panel-title-en">SKILLS &amp; TOOLS</span>スキル・ツール</h2>
                     <div class="tabs" role="tablist" aria-label="スキルとツール">
@@ -163,7 +160,6 @@
                     </div>
                 </section>
 
-                <!-- Contact（内容は src/content/profile.js の contact） -->
                 <section id="contact" class="panel">
                     <h2 class="panel-title"><span class="panel-title-en">CONTACT</span>連絡先</h2>
                     <div class="panel-body contact-body">
@@ -173,7 +169,6 @@
                 </section>
             </main>
 
-            <!-- ========== サイドバー ========== -->
             <aside class="sidebar" id="character">
                 <section class="side-box character-card">
                     <h2 class="side-title">CHARACTER</h2>
@@ -190,7 +185,6 @@
                     <ul class="side-links" data-links="banner"></ul>
                 </section>
 
-                <!-- ゲームのキャラは src/content/profile.js の games -->
                 <section class="side-box">
                     <h2 class="side-title">GAME CHARACTERS</h2>
                     <ul class="game-list"></ul>
@@ -204,7 +198,6 @@
         </div>
     </div>
 
-    <!-- プロジェクト詳細モーダル -->
     <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
             <div class="modal-header">
@@ -216,7 +209,6 @@
                     <div class="modal-image-section">
                         <img id="modalImage" alt="" class="modal-image" hidden>
                         <div id="modalImagePlaceholder" class="modal-image-placeholder">No Image</div>
-                        <!-- .md の store: に書いた入手先 -->
                         <div id="modalStore" class="modal-store" hidden></div>
                     </div>
                     <div class="modal-info-section">
@@ -230,7 +222,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- .md の「## 実装内容」などはここに表示 -->
                 <div id="modalExtraSections"></div>
                 <div class="modal-video-section">
                     <h4>動画</h4>
@@ -240,12 +231,10 @@
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
-                <!-- .md の twitter: に書いたポストを埋め込む -->
                 <div class="modal-tweet-section" id="modalTweetSection" hidden>
                     <h4>X (Twitter)</h4>
                     <div id="modalTweets"></div>
                 </div>
-                <!-- .md の links: に書いたその他のリンク -->
                 <div class="modal-link-section" id="modalLinkSection" hidden>
                     <h4>Links</h4>
                     <ul id="modalLinks" class="modal-links"></ul>
@@ -254,7 +243,6 @@
         </div>
     </div>
 
-    <!-- フッター -->
     <footer class="footer">
         <div class="container footer-inner">
             <ul class="footer-links" data-links="text"></ul>

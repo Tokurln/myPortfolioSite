@@ -879,6 +879,165 @@ a.affiliation-name:hover {
     color: var(--text-sub);
 }
 
+/* ========== History（年表） ========== */
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.history-year {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 0 12px;
+}
+
+.history-year-label {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--gold);
+}
+
+/* 縦の線 */
+.history-items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 22px;
+}
+
+.history-items::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: var(--border);
+}
+
+.history-item {
+    --history-color: var(--dark-3);
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 0 8px;
+}
+
+.history-contest { --history-color: var(--accent); }
+.history-hackathon { --history-color: #2f9e6e; }
+.history-intern { --history-color: #8a4fd0; }
+.history-award { --history-color: var(--gold); }
+.history-talk { --history-color: #d0603a; }
+
+/* 線の上の点 */
+.history-item::before {
+    content: '';
+    position: absolute;
+    left: -21px;
+    top: 9px;
+    width: 10px;
+    height: 10px;
+    background: var(--bg-panel);
+    border: 2px solid var(--history-color);
+    transform: rotate(45deg);
+}
+
+.history-month {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--text-sub);
+}
+
+.history-body {
+    padding: 4px 0 10px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.history-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+}
+
+.history-type {
+    padding: 0 8px;
+    font-size: 11px;
+    line-height: 20px;
+    color: #fff;
+    background: var(--history-color);
+    border-radius: 2px;
+}
+
+.history-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+a.history-title {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a.history-title:hover {
+    text-decoration: underline;
+}
+
+.history-result {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 1px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #7a5a16;
+    background: #fdf5df;
+    border: 1px solid var(--gold-light);
+    border-radius: 2px;
+}
+
+.history-note {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--text-sub);
+}
+
+.history-work {
+    display: block;
+    margin-top: 6px;
+    padding: 0;
+    font: inherit;
+    font-size: 13px;
+    color: var(--accent);
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.history-work::before {
+    content: '▶ ';
+    font-size: 10px;
+}
+
+.history-work:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+    .history-year {
+        grid-template-columns: 1fr;
+    }
+
+    .history-year-label {
+        margin-bottom: 4px;
+    }
+}
+
 /* ========== Skills ========== */
 .skills-grid {
     display: grid;

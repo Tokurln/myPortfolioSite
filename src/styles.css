@@ -432,6 +432,47 @@ body {
     color: #a8daff;
 }
 
+/* その他のリンク */
+.modal-link-section {
+    border-top: 1px solid #3a3a5e;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.modal-link-section[hidden] {
+    display: none;
+}
+
+.modal-link-section h4 {
+    color: #a8daff;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.modal-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.modal-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #a8daff;
+    border-radius: 999px;
+    color: #a8daff;
+    text-decoration: none;
+    word-break: break-all;
+    transition: background 0.2s, color 0.2s;
+}
+
+.modal-links a:hover {
+    background: #a8daff;
+    color: #1a1a2e;
+}
+
 /* 「## 実装内容」などの追加セクション（横幅いっぱい） */
 .modal-extra-section {
     border-top: 1px solid #3a3a5e;

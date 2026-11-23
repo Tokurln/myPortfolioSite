@@ -6,6 +6,7 @@ role: キャラクター3Dモデル制作、ダンスアニメーション、ス
 image: 
 youtube: 
 twitter:
+links:
 order: 2
 draft: false
 ---

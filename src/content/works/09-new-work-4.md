@@ -1,25 +1,23 @@
 ---
 # 書き終わったら draft を false にすると、サイトに表示されます
-title: 新しい作品 4
-# 使ったツール（カンマ区切り）
-tech: [Unity, Blender]
-period: 2026年 1月
-# モーダルの「担当内容」
-role: ここに担当した作業を書く
-# 画像は public/images/works/ に置いて、images/works/ファイル名 と書く（なければ空欄）
-image:
-# YouTube の埋め込みURL https://www.youtube.com/embed/動画ID（なければ空欄）
+title: Dream Ever Garden
+tech: [Unity, C#, Blender]
+period: 2026年 7月～8月
+role: 世界設定作成。チームマネジメント。同期・非同期オンライン実装。一部アセット作成。
+image: images/works/ShapeOfDreams.jpg
 youtube:
-# X(Twitter) のポストURL https://x.com/ユーザー名/status/数字（複数なら [URL1, URL2]、なければ空欄）
 twitter:
-# 古い作品ほど小さい数字にする（サイトでは大きい数字＝新しい作品が上に表示される）
+links: https://ivrc.net/2026_metaverse/seed-stage/
 order: 9
-draft: true
+draft: false
 ---
 
-ここに「ゲームの説明」を書く（モーダルに表示される本文）。
+10分でループする世界で3つのギミックを解き、最後の扉を開いてゲームクリアを目指す謎解きゲームです。難易度が高く、初見での攻略は困難です。しかし世界には過去のプレイヤーが残したヒントやアイテム、ゲームオーバーになった記録が蓄積されています。それらを手がかりに周回を重ね、攻略を進めます。メタバースの「複数人が共通の目標を達成するための空間」という特性に着目し、1人で遊んでいても見知らぬ他者と助け合える非同期的な協力プレイを実現しました。
 
 ## 実装内容
 
-- ここに実装したことを書く
-- 箇条書きは「- 」で始める
+- Meta XR SDKでのVR機能実装
+- Unity Multiplayer Serviceを使用したオンラインマルチ実装
+- Netcode for GameObjectsのゲーム内オンラインロジック実装
+- Unity Cloudでのバックエンド・永続化実装
+- 各メンバーの実装をオンライン版に修正

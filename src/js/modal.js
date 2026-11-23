@@ -80,6 +80,7 @@ export function openProjectModal(project) {
     }
 
     renderTweets(project.twitter);
+    renderLinks(project.links);
 
     modal().classList.add('show');
     document.body.style.overflow = 'hidden';
@@ -143,6 +144,25 @@ async function renderTweets(urls) {
         });
         if (tweet) slot.querySelector('a')?.remove();
     }
+}
+
+// .md の links: に書いたリンクを一覧で表示（なければセクションごと隠す）
+function renderLinks(links) {
+    const section = document.getElementById('modalLinkSection');
+    const list = document.getElementById('modalLinks');
+    list.replaceChildren(
+        ...links.map(({ label, url }) => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = url;
+            a.target = '_blank';
+            a.rel = 'noreferrer';
+            a.textContent = label;
+            li.append(a);
+            return li;
+        })
+    );
+    section.hidden = links.length === 0;
 }
 
 export function closeProjectModal() {

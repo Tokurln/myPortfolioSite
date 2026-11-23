@@ -7,6 +7,7 @@ image: images/works/live.png
 youtube: 
 twitter:
 links:
+store:
 order: 2
 draft: false
 ---

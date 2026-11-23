@@ -75,6 +75,55 @@ function parseLink(item) {
     return { label: label || url, url };
 }
 
+// 入手先の URL からストア名とアイコンの種類を決める（表示名を書かなかったときに使う）
+const STORES = [
+    { match: /unityroom\.com/, label: 'unityroom', kind: 'unityroom' },
+    { match: /apps\.apple\.com/, label: 'App Store', kind: 'appstore' },
+    { match: /play\.google\.com/, label: 'Google Play', kind: 'googleplay' },
+    { match: /store\.steampowered\.com/, label: 'Steam', kind: 'steam' },
+    { match: /itch\.io/, label: 'itch.io', kind: 'itch' },
+    { match: /booth\.pm/, label: 'BOOTH', kind: 'booth' },
+    { match: /github\.com/, label: 'GitHub', kind: 'github' },
+];
+
+function parseStore(item) {
+    const link = parseLink(item);
+    if (!link) return null;
+    const store = STORES.find((s) => s.match.test(link.url));
+    const named = link.label !== link.url;
+    return {
+        url: link.url,
+        label: named ? link.label : store?.label ?? new URL(link.url).hostname,
+        kind: store?.kind ?? 'other',
+    };
+}
+
+// YouTube のどの形式の URL でも埋め込み用（/embed/動画ID）に変換する
+// 例: https://youtu.be/ID?si=... / https://www.youtube.com/watch?v=ID / /shorts/ID / /live/ID
+function toYoutubeEmbed(value) {
+    if (!value) return '';
+    let url;
+    try {
+        url = new URL(String(value).trim());
+    } catch {
+        return '';
+    }
+    const host = url.hostname.replace(/^(www|m)\./, '');
+    let id = '';
+    if (host === 'youtu.be') {
+        id = url.pathname.slice(1).split('/')[0];
+    } else if (host === 'youtube.com' || host === 'youtube-nocookie.com') {
+        id =
+            url.searchParams.get('v') ??
+            url.pathname.match(/^\/(?:embed|shorts|live|v)\/([^/?]+)/)?.[1] ??
+            '';
+    }
+    if (!/^[\w-]{6,}$/.test(id)) return '';
+    const start = url.searchParams.get('t') ?? url.searchParams.get('start');
+    const seconds = start ? parseInt(start, 10) : 0;
+    return `https://www.youtube.com/embed/${id}` + (seconds > 0 ? `?start=${seconds}` : '');
+}
+
 function parseWork(path, raw) {
     const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
     if (!match) {
@@ -89,11 +138,14 @@ function parseWork(path, raw) {
         period: data.period ?? '',
         role: data.role ?? '',
         image: data.image ?? '',
-        youtube: data.youtube ?? '',
+        // 共有リンク（youtu.be）や watch?v= の URL をそのまま書いても OK
+        youtube: toYoutubeEmbed(data.youtube),
         // X(Twitter) のポストURL。1つなら文字列、複数なら [url1, url2]
         twitter: [].concat(data.twitter ?? []).filter(Boolean),
         // その他のリンク。「表示名|URL」または URL だけ。複数なら [表示名|URL1, 表示名|URL2]
         links: [].concat(data.links ?? []).filter(Boolean).map(parseLink).filter(Boolean),
+        // アプリ・ゲームの入手先（unityroom / App Store / Steam など）。書き方は links と同じ
+        store: [].concat(data.store ?? []).filter(Boolean).map(parseStore).filter(Boolean),
         order: typeof data.order === 'number' ? data.order : -Infinity,
         draft: data.draft === true,
         explanation,

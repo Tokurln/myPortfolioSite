@@ -8,6 +8,7 @@ image: images/works/ResidentGhost.jpg
 youtube: https://youtu.be/0Rzw3y8Yefk?si=nP1-dccaLY2I1dCK
 twitter: https://x.com/aizu_PxL/status/2108200879316992126?a=upC-o0tJ-UOkajLcu38&s=20
 links:
+store:
 order: 10
 draft: false
 ---

@@ -7,6 +7,7 @@ image: images/works/Shinadaman.png
 youtube: https://www.youtube.com/embed/nNAIxISfTwo
 twitter:
 links:
+store:
 order: 5
 draft: false
 ---

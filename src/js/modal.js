@@ -1,3 +1,5 @@
+import { createStoreLinks } from './store.js';
+
 const modal = () => document.getElementById('projectModal');
 
 // .md の本文を表示用の要素にする（空行で段落、「- 」で始まる行は箇条書き）
@@ -78,6 +80,11 @@ export function openProjectModal(project) {
     } else {
         videoSection.style.display = 'none';
     }
+
+    // 入手先（なければ隠す）
+    const store = document.getElementById('modalStore');
+    store.replaceChildren(...(project.store.length ? [createStoreLinks(project.store)] : []));
+    store.hidden = project.store.length === 0;
 
     renderTweets(project.twitter);
     renderLinks(project.links);

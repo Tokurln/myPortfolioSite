@@ -73,14 +73,19 @@ function createItem(item) {
     return li;
 }
 
+// 表示先の要素が index.html から消されていても、他の処理を止めないようにそれぞれ存在チェックする
 export function renderAffiliations() {
     // Profile パネルの一覧
     const list = document.querySelector('.affiliation-list');
-    list.replaceChildren(...affiliations.map(createItem));
-    list.closest('.affiliation-block').hidden = affiliations.length === 0;
+    if (list) {
+        list.replaceChildren(...affiliations.map(createItem));
+        const block = list.closest('.affiliation-block');
+        if (block) block.hidden = affiliations.length === 0;
+    }
 
     // サイドバーのキャラクターカード（main: true のもの）
     const side = document.querySelector('.character-affiliation');
+    if (!side) return;
     const mains = affiliations.filter((item) => item.main);
     side.replaceChildren(
         ...mains.map((item) => {

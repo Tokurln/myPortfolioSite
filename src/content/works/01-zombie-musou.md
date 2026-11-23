@@ -6,7 +6,8 @@ role: 武器3Dモデル制作、キャラクターデザイン、テクスチャ
 image: images/works/zombi.png
 youtube: https://www.youtube.com/embed/x6cFj1lezHE
 twitter:
-links:
+links:　
+store: https://drive.google.com/drive/folders/1Fy5raQ60GjqrSFKM-mOysxDZ15QLUf0w
 order: 1
 draft: false
 ---

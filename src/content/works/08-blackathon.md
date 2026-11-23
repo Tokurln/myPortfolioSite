@@ -9,6 +9,7 @@ image:
 youtube:
 twitter: https://x.com/takami_vr/status/2063555373416767897?a=i0Pu49yYkvlE66l2iLM&s=20
 links:
+store:
 order: 8
 draft: false
 ---

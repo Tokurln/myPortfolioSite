@@ -216,6 +216,8 @@
                     <div class="modal-image-section">
                         <img id="modalImage" alt="" class="modal-image" hidden>
                         <div id="modalImagePlaceholder" class="modal-image-placeholder">No Image</div>
+                        <!-- .md の store: に書いた入手先 -->
+                        <div id="modalStore" class="modal-store" hidden></div>
                     </div>
                     <div class="modal-info-section">
                         <div class="modal-section" id="modalExplanationSection">
@@ -233,7 +235,9 @@
                 <div class="modal-video-section">
                     <h4>動画</h4>
                     <div class="modal-video-frame">
-                        <iframe id="modalYoutube" title="作品の動画" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="modalYoutube" title="作品の動画" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 <!-- .md の twitter: に書いたポストを埋め込む -->

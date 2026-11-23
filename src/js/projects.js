@@ -1,8 +1,14 @@
+import { createStoreLinks } from './store.js';
+
 // 作品データから作品カードを生成する
+// カード本体（サムネイル〜タグ）はモーダルを開くボタン、その下に入手先リンクを並べる
 function createCard(project, onSelect) {
-    const card = document.createElement('button');
-    card.type = 'button';
+    const card = document.createElement('article');
     card.className = 'project-card';
+
+    const main = document.createElement('button');
+    main.type = 'button';
+    main.className = 'project-card-main';
 
     // カード上部のサムネイル（画像がない作品はプレースホルダー）
     let thumb;
@@ -38,8 +44,13 @@ function createCard(project, onSelect) {
     });
 
     body.append(period, title, tech);
-    card.append(thumb, body);
-    card.addEventListener('click', () => onSelect(project));
+    main.append(thumb, body);
+    main.addEventListener('click', () => onSelect(project));
+    card.append(main);
+
+    if (project.store.length) {
+        card.append(createStoreLinks(project.store, 'store-links project-store'));
+    }
     return card;
 }
 

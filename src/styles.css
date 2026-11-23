@@ -582,7 +582,6 @@ ul {
 .project-card {
     display: flex;
     flex-direction: column;
-    text-align: left;
     background: #fff;
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -602,6 +601,96 @@ ul {
         opacity: 0;
         transform: translateY(6px);
     }
+}
+
+/* カード本体（モーダルを開くボタン） */
+.project-card-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    text-align: left;
+}
+
+/* 入手先ボタン（カード下部・モーダル共通） */
+.store-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project-store {
+    padding: 10px 14px 12px;
+    border-top: 1px dashed var(--border);
+    background: var(--bg-sub);
+}
+
+.store-link {
+    --store-color: var(--dark-3);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px 5px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #fff;
+    text-decoration: none;
+    background: var(--store-color);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: var(--radius);
+    transition: filter 0.2s, transform 0.2s;
+}
+
+.store-link:hover {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+.store-icon {
+    font-size: 9px;
+    opacity: 0.85;
+}
+
+.store-unityroom {
+    --store-color: #2a2a2a;
+}
+
+.store-appstore {
+    --store-color: #0a84ff;
+}
+
+.store-googleplay {
+    --store-color: #01875f;
+}
+
+.store-steam {
+    --store-color: #1b2838;
+}
+
+.store-itch {
+    --store-color: #fa5c5c;
+}
+
+.store-booth {
+    --store-color: #fc4d50;
+}
+
+.store-github {
+    --store-color: #24292f;
+}
+
+.store-other {
+    --store-color: var(--accent);
+}
+
+.modal-store {
+    margin-top: 12px;
+}
+
+.modal-store .store-link {
+    padding: 8px 16px 8px 12px;
+    font-size: 14px;
 }
 
 .project-thumb {

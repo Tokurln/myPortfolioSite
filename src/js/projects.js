@@ -5,12 +5,25 @@ export function renderProjects(container, projects, onSelect) {
             const card = document.createElement('div');
             card.className = 'project-card';
 
+            // カード上部のサムネイル（画像がない作品はプレースホルダー）
+            let thumb;
+            if (project.image) {
+                thumb = document.createElement('img');
+                thumb.className = 'project-thumb';
+                thumb.src = project.image;
+                thumb.alt = project.title;
+                thumb.loading = 'lazy';
+            } else {
+                thumb = document.createElement('div');
+                thumb.className = 'project-thumb project-thumb-empty';
+                thumb.textContent = 'No Image';
+            }
+
+            const body = document.createElement('div');
+            body.className = 'project-card-body';
+
             const title = document.createElement('h3');
             title.textContent = project.title;
-
-            const description = document.createElement('p');
-            description.className = 'project-description';
-            description.textContent = project.description;
 
             const tech = document.createElement('div');
             tech.className = 'project-tech';
@@ -25,7 +38,8 @@ export function renderProjects(container, projects, onSelect) {
             period.className = 'project-period';
             period.textContent = project.period;
 
-            card.append(title, description, tech, period);
+            body.append(title, tech, period);
+            card.append(thumb, body);
             card.addEventListener('click', () => onSelect(project));
             return card;
         })

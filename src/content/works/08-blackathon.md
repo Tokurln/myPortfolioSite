@@ -1,7 +1,7 @@
 ---
 # 書き終わったら draft を false にすると、サイトに表示されます
 title: ブラッカソンもくもくMR
-tech: [Unity, Blender]
+tech: [Unity, C#, Blender, VFX, Shader]
 period: 2026年 6月 (2日間)
 # モーダルの「担当内容」
 role: デザイナー

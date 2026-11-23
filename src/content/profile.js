@@ -18,16 +18,16 @@ export const profile = {
     games: [
         {
             game: 'FINAL FANTASY XIV',
-            name: 'キャラクター名', // ← キャラ名
-            server: 'ワールド名', // ← ワールド名（例: Mana / Tiamat）
-            url: '', // ← キャラページURL（例: https://jp.finalfantasyxiv.com/lodestone/character/12345678/）
+            name: 'Toku Rin', // ← キャラ名
+            server: 'Meteor / Zeromus', // ← ワールド名（例: Mana / Tiamat）
+            url: 'https://jp.finalfantasyxiv.com/lodestone/character/49662528/', // ← キャラページURL（例: https://jp.finalfantasyxiv.com/lodestone/character/12345678/）
             color: '#3b6fd4',
         },
         {
             game: 'AION2',
-            name: 'キャラクター名', // ← キャラ名
-            server: 'サーバー名', // ← サーバー名
-            url: '', // ← キャラページURL
+            name: 'tokurin', // ← キャラ名
+            server: '天族 ネザカン', // ← サーバー名
+            url: 'https://aion2.plaync.com/ja-jp/characters/1502/DnU27YOmcowuQ9RiKardz8kbVOq6aO293sy3FxZm6os%3D?region=as', // ← キャラページURL
             color: '#b8892f',
         },
     ],
@@ -35,7 +35,7 @@ export const profile = {
     // Contact セクション
     contact: {
         // メールアドレスを載せる場合だけ書く（空欄なら表示しない）
-        email: '',
-        message: 'お仕事のご相談・ご連絡は、X の DM または GitHub からお気軽にどうぞ。',
+        email: 'tokurin.official@gmail.com',
+        message: 'ご連絡は、X の DM または GitHub からお気軽にどうぞ。',
     },
 };

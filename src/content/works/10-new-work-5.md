@@ -1,7 +1,7 @@
 ---
 # 書き終わったら draft を false にすると、サイトに表示されます
 title: Resident Ghost
-tech: [Unity, Blender]
+tech: [Unity, C#, Blender, VFX, Shader]
 period: 2026年 8月～10月
 role: VR機能実装、チームマネジメント
 image: images/works/ResidentGhost.jpg

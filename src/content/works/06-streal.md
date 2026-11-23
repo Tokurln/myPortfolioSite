@@ -1,7 +1,7 @@
 ---
 # 書き終わったら draft を false にすると、サイトに表示されます
 title: STREAL
-tech: [Unity, Twitch]
+tech: [Unity, C#, Twitch]
 period: 2026年 2月～3月
 # モーダルの「担当内容」
 role: チームマネジメント、Unity機能実装、Twitch連携実装

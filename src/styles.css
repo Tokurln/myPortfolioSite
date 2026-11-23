@@ -1190,8 +1190,8 @@ a.game-card:hover {
     inset: 0;
     z-index: 1000;
     padding: 24px 16px;
-    background: rgba(8, 9, 12, 0.78);
-    backdrop-filter: blur(3px);
+    /* backdrop-filter(ぼかし) は裏が動くたびに全画面を再計算して重くなるので使わない */
+    background: rgba(8, 9, 12, 0.85);
 }
 
 .modal.show {
@@ -1256,6 +1256,10 @@ a.game-card:hover {
 .modal-scroll {
     overflow-y: auto;
     padding: 20px;
+    /* 端までスクロールしても裏のページを動かさない／描き直しをこの枠の中だけに閉じ込める */
+    overscroll-behavior: contain;
+    contain: content;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal-body-wrapper {

@@ -3,7 +3,7 @@ title: 音ライブ
 tech: [Blender]
 period: 2025年 2月～3月
 role: キャラクター3Dモデル制作、ダンスアニメーション、ステージデザイン
-image: images/works/live.png
+image: images/works/live.webp
 youtube: 
 twitter:
 links:

@@ -3,7 +3,7 @@ title: HATO
 tech: [Blender]
 period: 2025年 6月
 role: 3Dモデル制作、テクスチャ作成、アニメーション設定
-image: images/works/PigeonGreenLogo.png
+image: images/works/PigeonGreenLogo.webp
 youtube: 
 twitter:
 links:

@@ -4,7 +4,7 @@ title: Dream Ever Garden
 tech: [Unity, C#, Blender, VFX, Shader]
 period: 2026年 7月～8月
 role: 世界設定作成。チームマネジメント。同期・非同期オンライン実装。一部アセット作成。
-image: images/works/ShapeOfDreams.jpg
+image: images/works/ShapeOfDreams.webp
 youtube:
 twitter:
 links: https://ivrc.net/2026_metaverse/seed-stage/

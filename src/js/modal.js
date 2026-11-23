@@ -89,6 +89,9 @@ export function openProjectModal(project) {
     renderTweets(project.twitter);
     renderLinks(project.links);
 
+    if (!modal().classList.contains('show')) {
+        document.dispatchEvent(new Event('modal:open')); // ヒーローのスライドを止める合図
+    }
     modal().classList.add('show');
     document.body.style.overflow = 'hidden';
 }
@@ -175,6 +178,7 @@ function renderLinks(links) {
 export function closeProjectModal() {
     modal().classList.remove('show');
     document.body.style.overflow = '';
+    document.dispatchEvent(new Event('modal:close')); // ヒーローのスライドを再開
     // 動画の再生を止める
     document.getElementById('modalYoutube').src = '';
     document.getElementById('modalTweets').replaceChildren();
